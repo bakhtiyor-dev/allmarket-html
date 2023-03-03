@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index page</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+<div class="bg-yellow-400 h-7 w-full hidden md:block">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-2">
+        <div>
+            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                    class="text-xs font-medium text-gray-600 inline-flex items-center" type="button">
+                Русский <i class="fas fa-caret-down ml-2"></i>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdown" class="z-10 hidden  bg-white divide-y divide-gray-100 rounded shadow w-20">
+                <ul class="text-xs text-gray-700" aria-labelledby="dropdownDefaultButton">
+                    <li>
+                        <a href="#" class="block p-2 bg-gray-100 hover:bg-gray-100">Русский</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="block p-2 hover:bg-gray-100">Узбекский</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <a href="" class="text-xs text-gray-600 font-medium">
+                <i class="fas fa-sign-in mr-1"></i> Войти
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="max-w-6xl mx-auto mb-10 px-2">
+    <nav class="p-5 flex items-center sticky top-0 bg-white z-40">
+
+        <div>
+            <a href="/">
+                <img src="assets/logo.svg" class="h-6" alt="logo"/>
+            </a>
+        </div>
+
+        <form class="ml-8 w-1/2">
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Поиск</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <i class="fas fa-search text-cyan-600"></i>
+                </div>
+
+                <div class="absolute inset-y-0 right-0 flex items-center pr-8 pointer-events-none">
+                    <code class="text-sm text-gray-400">Ctrl K</code>
+                </div>
+                <input type="search" id="default-search"
+                       class="block w-full p-1.5 pl-10 text-gray-900 border-2 border-cyan-500 rounded-lg bg-gray-50 outline-none hover:bg-gray-100 cursor-pointer"
+                       placeholder="Поиск..." required>
+            </div>
+        </form>
+        <button class="bg-cyan-500 text-white hover:bg-cyan-600 hover:shadow font-medium px-5 py-2 rounded-lg ml-5">
+            <i class="fas fa-bars"></i>
+            Каталог
+        </button>
+
+        <div class="ml-5">
+            <a href="#" class="hover:bg-gray-100  py-3 px-3 rounded-lg">
+                <i class="fa-regular fa-bookmark text-yellow-400 text-2xl"></i>
+            </a>
+        </div>
+    </nav>
+
+
+    <div id="default-carousel" class="relative" data-carousel="static">
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <span class="absolute text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
+                <img src="https://aws-obg-image-lb-5.tcl.com/content/dam/brandsite/region/in/blog/pc/detail/new-blogs---28th-july/2022-tv-shopping-guide-time-to-get-your-next-google-tv/TimetoGetThumweb.jpg"
+                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://1.bp.blogspot.com/-pbDffAW9Ays/YbHJLuVnRPI/AAAAAAAAaFw/NGhGhgeL98UV3Cq5h5aSfhScE4GA8EuDgCNcBGAsYHQ/s900/mobail-banner-design_900.jpg"
+                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1"
+                    data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                    data-carousel-slide-to="1"></button>
+        </div>
+
+        <!-- Slider controls -->
+        <button type="button"
+                class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                 stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="sr-only">Previous</span>
+        </span>
+        </button>
+        <button type="button"
+                class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-next>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                 stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <span class="sr-only">Next</span>
+        </span>
+        </button>
+    </div>
+
+
+    <aside aria-label="Sidebar">
+        <div class="px-3 py-4 overflow-y-auto rounded bg-gray-50 fixed h-screen w-60 hidden bg-white top-0 left-0 shadow-lg">
+            <ul class="space-y-2">
+                <li>
+                    <a href="#"
+                       class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
+                        <span class="ml-3">Dashboard</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="mt-4">
+        <h4 class="text-xl uppercase font-bold mb-2">Популярные категории</h4>
+        <div class="grid grid-cols-6 gap-2 bg-gray-50 p-5">
+            <a href="#" class="p-3 text-center shadow bg-white hover:bg-gray-50 rounded">
+                <i class="fa-solid fa-mobile-screen text-cyan-500 mr-1"></i>
+                <span class="font-medium">Смартфоны</span>
+            </a>
+
+            <a href="#" class="p-3 text-center shadow bg-white hover:bg-gray-50 rounded">
+                <i class="fa-solid fa-tv text-cyan-500 mr-1"></i>
+                <span class="font-medium">Телевизоры</span>
+            </a>
+
+            <a href="#" class="p-3 text-center shadow bg-white hover:bg-gray-50 rounded">
+                <i class="fa-solid fa-laptop text-cyan-500 mr-1"></i>
+                <span class="font-medium">Компьютеры</span>
+            </a>
+
+            <a href="#" class="p-3 text-center shadow bg-white hover:bg-gray-50 rounded">
+                <i class="fa-solid fa-fan text-cyan-500 mr-1"></i>
+                <span class="font-medium">Кондиционеры</span>
+            </a>
+
+            <a href="#" class="p-3 text-center shadow bg-white hover:bg-gray-50 rounded">
+                <i class="fa-solid fa-snowflake text-cyan-500 mr-1"></i>
+                <span class="font-medium">Холодильники</span>
+            </a>
+
+
+            <a href="#" class="p-3 text-center shadow bg-white hover:bg-gray-50 rounded">
+                <i class="fa-solid fa-tablet text-cyan-500 mr-1"></i>
+                <span class="font-medium">Планшеты</span>
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="mt-10">
+
+        <a href="#" class="text-xl font-bold mb-3 uppercase">Смартфоны <i class="fas fa-chevron-right text-lg"></i></a>
+        <div class="mt-3 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+
+            <div class="bg-white rounded-lg border-2 relative">
+
+                <div class="p-3">
+                    <a href="#">
+                        <img class="h-30 object-cover mx-auto rounded-t-lg"
+                             src="https://openshop.uz/public/storage/uploads/products/photos/202210/LAeHdDTNTM9Ao4rMLczeZGQMJRrcvdrkNPtEebcn.jpg"
+                             alt="product image"/>
+                    </a>
+                </div>
+
+
+                <div class="px-5 pb-5">
+                    <a href="#" class="">
+                        <h5 class="font-medium tracking-tight text-gray-900 hover:text-cyan-500">Смартфон Apple
+                            iPhone 14 Pro 128GB Purple</h5>
+                    </a>
+                    <div class="flex items-center mt-2.5 mb-5">
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded ml-2">5.0</span>
+                    </div>
+                    <div class="font-bold text-gray-900 mb-2">15 000 000 UZS</div>
+                    <span class="text-xs bg-yellow-400 px-2 py-0.5 font-semibold rounded-lg ">Openshop.uz</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border-2 relative">
+            <span data-tooltip-target="tooltip-default"
+                  class="bg-red-200 ml-1 text-red-800 text-xs font-medium mr-2 px-2.5 absolute top-1 py-0.5 rounded">Б/У</span>
+
+                <div id="tooltip-default" role="tooltip"
+                     class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Б/У - бывший в употреблении товар (т.е. использованный)
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+
+                <div class="p-3">
+                    <a href="#">
+
+                        <img class="h-30 object-cover mx-auto rounded-t-lg"
+                             src="/assets/img.png"
+                             alt="product image"/>
+                    </a>
+                </div>
+
+
+                <div class="px-5 pb-5">
+                    <a href="#" class="">
+                        <h5 class="font-medium tracking-tight text-gray-900 hover:text-cyan-500">Смартфон Apple
+                            iPhone 13 Pro 256</h5>
+                    </a>
+                    <div class="flex items-center mt-2.5 mb-5">
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded ml-2">5.0</span>
+                    </div>
+                    <div class="font-bold text-gray-900 mb-2">$799</div>
+                    <span class="text-xs bg-yellow-400 px-2 py-0.5 font-semibold rounded-lg ">Ms market</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border-2 relative">
+            <span data-tooltip-target="tooltip-default"
+                  class="bg-red-200 ml-1 text-red-800 text-xs font-medium mr-2 px-2.5 absolute top-1 py-0.5 rounded">Б/У</span>
+
+                <div id="tooltip-default" role="tooltip"
+                     class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Б/У - бывший в употреблении товар (т.е. использованный)
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+
+                <div class="p-3">
+                    <a href="#">
+
+                        <img class="h-30 object-cover mx-auto rounded-t-lg"
+                             src="/assets/img.png"
+                             alt="product image"/>
+                    </a>
+                </div>
+
+
+                <div class="px-5 pb-5">
+                    <a href="#" class="">
+                        <h5 class="font-medium tracking-tight text-gray-900 hover:text-cyan-500">Смартфон Apple
+                            iPhone 13 Pro 256</h5>
+                    </a>
+                    <div class="flex items-center mt-2.5 mb-5">
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded ml-2">5.0</span>
+                    </div>
+                    <div class="font-bold text-gray-900 mb-2">$799</div>
+                    <span class="text-xs bg-yellow-400 px-2 py-0.5 font-semibold rounded-lg ">Ms market</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border-2 relative">
+            <span data-tooltip-target="tooltip-default"
+                  class="bg-red-200 ml-1 text-red-800 text-xs font-medium mr-2 px-2.5 absolute top-1 py-0.5 rounded">Б/У</span>
+
+                <div id="tooltip-default" role="tooltip"
+                     class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Б/У - бывший в употреблении товар (т.е. использованный)
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+
+                <div class="p-3">
+                    <a href="#">
+
+                        <img class="h-30 object-cover mx-auto rounded-t-lg"
+                             src="/assets/img.png"
+                             alt="product image"/>
+                    </a>
+                </div>
+
+
+                <div class="px-5 pb-5">
+                    <a href="#" class="">
+                        <h5 class="font-medium tracking-tight text-gray-900 hover:text-cyan-500">Смартфон Apple
+                            iPhone 13 Pro 256</h5>
+                    </a>
+                    <div class="flex items-center mt-2.5 mb-5">
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded ml-2">5.0</span>
+                    </div>
+                    <div class="font-bold text-gray-900 mb-2">$799</div>
+                    <span class="text-xs bg-yellow-400 px-2 py-0.5 font-semibold rounded-lg ">Ms market</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border-2 relative">
+            <span data-tooltip-target="tooltip-default"
+                  class="bg-red-200 ml-1 text-red-800 text-xs font-medium mr-2 px-2.5 absolute top-1 py-0.5 rounded">Б/У</span>
+
+                <div id="tooltip-default" role="tooltip"
+                     class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Б/У - бывший в употреблении товар (т.е. использованный)
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+
+                <div class="p-3">
+                    <a href="#">
+
+                        <img class="h-30 object-cover mx-auto rounded-t-lg"
+                             src="/assets/img.png"
+                             alt="product image"/>
+                    </a>
+                </div>
+
+
+                <div class="px-5 pb-5">
+                    <a href="#" class="">
+                        <h5 class="font-medium tracking-tight text-gray-900 hover:text-cyan-500">Смартфон Apple
+                            iPhone 13 Pro 256</h5>
+                    </a>
+                    <div class="flex items-center mt-2.5 mb-5">
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded ml-2">5.0</span>
+                    </div>
+                    <div class="font-bold text-gray-900 mb-2">$799</div>
+                    <span class="text-xs bg-yellow-400 px-2 py-0.5 font-semibold rounded-lg ">Ms market</span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+<footer class="p-4 sm:p-6 bg-gray-800  w-full">
+    <div class="max-w-6xl mx-auto">
+        <div class="md:flex md:justify-between mb-10">
+            <div class="mb-6 md:mb-0">
+                <a href="/">
+                    <img src="/assets/logo.svg" class="h-6 mr-3" alt="logo"/>
+                </a>
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold uppercase text-white">Ресурсы</h2>
+                    <ul class="text-gray-400">
+                        <li class="mb-4">
+                            <a href="/about" class="hover:underline">О нас</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Подписывайтесь на
+                        нас</h2>
+                    <ul class="text-gray-600 dark:text-gray-400">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline ">Telegram</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"></h2>
+                    <ul class="text-gray-600 dark:text-gray-400">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Политика конфиденциальности</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Условия и положения</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            © 2023
+            <a href="/"
+               class="hover:underline">Allmarket.uz</a>. Все права защищены.
+        </span>
+            <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                <a href="#" class="text-lg text-gray-500 hover:text-white">
+                    <i class="fa-brands fa-facebook"></i>
+                    <span class="sr-only">Facebook page</span>
+                </a>
+
+                <a href="#" class="text-lg text-gray-500 hover:text-white">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span class="sr-only">Instagram page</span>
+                </a>
+
+                <a href="#" class="text-lg text-gray-500 hover:text-white">
+                    <i class="fa-brands fa-telegram"></i>
+                    <span class="sr-only">Telegram page</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
+
+</body>
+</html>
